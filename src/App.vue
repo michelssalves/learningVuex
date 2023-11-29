@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+      <ProductList/>
+      <hr>
+      <ShoppingCart/>
   </div>
 </template>
+<script>
 
+import ProductList from './components/ProductList.vue'
+import ShoppingCart from './components/ShoppingCart.vue'
+
+export default{
+  name: 'app',
+  components:{
+    ProductList,
+    ShoppingCart
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
