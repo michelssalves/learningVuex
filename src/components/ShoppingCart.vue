@@ -21,7 +21,8 @@ export default {
             total: 'cartTotal'
         }),
         ...mapState({
-            checkoutStatus: 'checkoutStatus'
+            checkoutStatus: state => state.cart.checkoutStatus
+            // checkoutStatus: 'checkoutStatus'
         }),
         // products(){
         //     return this.$store.getters.availableProducts
